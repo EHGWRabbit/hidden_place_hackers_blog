@@ -1,0 +1,1 @@
+web: gunicorn hidden_place.wsgi --log-file -
