@@ -1,0 +1,18 @@
+{% load bootstrap4 %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>{% block title %}{% endblock %}</title>
+<link href="{% static 'css/blog.css' %}" rel="stylesheet">
+</head>
+<body>
+<div id="content" class="container-fluid">
+{% block content %}
+{% endblock %}
+</div>
+<div id="sidebar">
+<h2>Убежище хакера(и разработчика...)</h2>
+</div>
+</body>
+</html>

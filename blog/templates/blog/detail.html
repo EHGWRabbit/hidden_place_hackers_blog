@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+{% block title %}{{ post.title }}{% endblock %}
+{% block content %}
+<h1>{{ post.title }}</h1>
+<p class="date">
+Опубликовано {{ post.publish }} автором {{ post.author }}
+</p>
+{{ post.body|linebreaks }}
+<p>
+    <a href="{% url 'blog:post_share' post.id %}">
+   Поделиться этой записью
+    </a>
+    </p>
+{% endblock %}
