@@ -38,11 +38,15 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 
+SITE_ID = 1
+
 # Application definition
 
 INSTALLED_APPS = [
     #local
     'blog.apps.BlogConfig',
+    'django.contrib.sites', 
+    'django.contrib.sitemaps',
     
     'django.contrib.admin',
     'django.contrib.auth',
@@ -53,6 +57,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #downloaded
     'bootstrap4',
+    'taggit',
 ]
 
 MIDDLEWARE = [
