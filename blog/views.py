@@ -3,7 +3,7 @@ from .models import Post
 from django.core.paginator import Paginator 
 from django.core.paginator import EmptyPage
 from django.core.paginator import PageNotAnInteger 
-from django.views.generic import ListView 
+from django.views.generic import TemplateView
 from .forms import EmailPostForm 
 from django.core.mail import send_mail 
 from .models import Comment 
@@ -71,4 +71,5 @@ def post_share(request, post_id):#create view
     else:#in negative 
         form = EmailPostForm()
     return render(request, 'blog/share.html', {'post': post, 'form': form, 'sent': sent})
+
 
